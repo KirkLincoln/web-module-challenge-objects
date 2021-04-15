@@ -170,8 +170,16 @@ Use the getReviewsByRating function below to do the following:
   ]
 */
 
- function getReviewByRating(/* code here */) {
-    /* code here */
+ function getReviewByRating(reviewers, ratings) {
+    const range = ratings.split('-');
+    const result = [];
+    reviewers.forEach(reviewer => {
+      if(reviewer.rating <= range[1] && reviewer.rating >= range[0]) {
+        result.push(reviewer);
+      }
+    });
+    console.log(result)
+    return result;
   }
 
   
@@ -188,9 +196,17 @@ Use the getLongReviews function below to do the following:
   ]
 */
 
-function getLongReviews(/* code here */) {
-    /* code here */
-  }
+function getLongReviews(reviewers) {
+  const range = ratings.split('-');
+  const result = [];
+  reviewers.forEach(reviewer => {
+    if(reviewer.rating <= range[1] && reviewer.rating >= range[0]) {
+      result.push(reviewer);
+    }
+  });
+  console.log(result)
+  return result;
+}
   
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 3: 💪💪💪💪💪💪💪💪💪💪 
